@@ -19,10 +19,10 @@ int main() {
     float pib2;
     int pontosturísticos;
     int pontosturísticos2;
-    float densidadepopulacional = população / área;
-    float densidadepopulacional2 = população2 / área2;
-    float pibpercapita = pib / população;
-    float pibpercapita2 = pib2 / população2;
+    float densidadepopulacional;
+    float densidadepopulacional2; 
+    float pibpercapita; 
+    float pibpercapita2; 
 
     printf("nome do estado: \n");
     scanf("%s", estado);
@@ -60,11 +60,11 @@ int main() {
     printf("pontos turísticos2: \n");
     scanf("%d", &pontosturísticos2);
 
-    densidadepopulacional = população / área;
-    pibpercapita = pib / população;
+    densidadepopulacional = (float)população / área;
+    pibpercapita = pib / (float)população;
 
-    densidadepopulacional2 = população2 / área2;
-    pibpercapita2 = pib2 / população2;
+    densidadepopulacional2 = (float)população2 / área2;
+    pibpercapita2 = pib2 / (float)população2;
 
 
     printf("nome do estado: %s \\n", estado);
@@ -81,8 +81,8 @@ int main() {
     printf("pib2: %.2f \n", pib2);
     printf("pontos turísticos: %d \n", pontosturísticos);
     printf("pontos turísticos2: %d \n", pontosturísticos2);
-    printf("dencidade populacional: %.2f \n", densidadepopulacional);
-    printf("dencidade populacional2: %.2f \n", densidadepopulacional2);
+    printf("densidade populacional: %.2f \n", densidadepopulacional);
+    printf("densidade populacional2: %.2f \n", densidadepopulacional2);
     printf("pib per capita: %.2f \n", pibpercapita);
     printf("pib per capita2: %.2f \n", pibpercapita2);
 
