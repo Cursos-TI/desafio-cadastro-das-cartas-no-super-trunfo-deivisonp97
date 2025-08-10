@@ -27,14 +27,14 @@ int main() {
     float superPoder2;
 
     printf("nome do estado: \n");
-    scanf(" %2s", estado);
+    scanf(" %s", estado);
     printf("nome do estado 2: \n");
-    scanf(" %2s", estado2);
+    scanf(" %s", estado2);
 
     printf("nome da cidade: \n");
-    scanf(" %49[^\\n]", nomedacidade);
+    scanf(" %s[^\\n]", nomedacidade);
     printf("nome da cidade2 \n");
-    scanf(" %49[^\\n]", nomedacidade2);
+    scanf(" %s[^\\n]", nomedacidade2);
 
 
     printf("codigo da carta:A letra do estado seguida de um número de 01 a 04 (ex: A01, B03) \n");
@@ -62,7 +62,7 @@ int main() {
     printf("pontos turísticos2: \n");
     scanf("%d", &pontosturísticos2);
 
-    densidadepopulacional = (float)população / (área != 0.0f);
+    densidadepopulacional = (float)população / área;
     pibpercapita = (pib*1000000000.0f) / (float)população;
 
     densidadepopulacional2 = (float)população2 / área2;
@@ -101,7 +101,7 @@ int main() {
     printf("super poder da carta: %.2f \n", superPoder);
     printf("super poder da carta2: %.2f \n", superPoder2);
 
-    printf("vencedor população: %lu \n", população > população2);
+    printf("vencedor população: %u \n", população > população2);
     printf("vencedor área: %d \n", área > área2);
     printf("vencedor pib: %d \n", pib > pib2);
     printf("vencedor pontos turísticos: %d \n", pontosturísticos > pontosturísticos2);
