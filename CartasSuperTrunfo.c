@@ -109,8 +109,8 @@ int main() {
     printf("vencedor pib per capita: %d \n", pibpercapita > pibpercapita2);
 
 
-    printf("carta 1: %s %d \n", estado, população);
-    printf("carta 2: %s %d \n", estado2, população2);
+    printf("carta 1: %s %lu \n", estado, população);
+    printf("carta 2: %s %lu \n", estado2, população2);
 
     if(população > população2){
         printf("Carta 1 venceu! \n");
