@@ -5,8 +5,8 @@
 int main() {
     printf("Cartas Super Trunfo \n");
 
-    char estado[5];
-    char estado2[5];
+    char estado[20];
+    char estado2[20];
     char nomedacidade[50];
     char nomedacidade2[50];
     char codigodacarta[5];
@@ -71,8 +71,8 @@ int main() {
     superPoder = (float)população + área + (pib * 1000000000.0f) + (float)pontosturísticos + (1.0f / densidadepopulacional) + pibpercapita;
     superPoder2 = (float)população2 + área2 + (pib2 * 1000000000.0f) + (float)pontosturísticos2 + (1.0f / densidadepopulacional2) + pibpercapita2;
 
-    printf("nome do estado: %s \\n", estado);
-    printf("nome do estado2: %s \\n", estado2);
+    printf("nome do estado: %s \n", estado);
+    printf("nome do estado2: %s \n", estado2);
     
     printf("nome da cidade: %s \n", nomedacidade);
     printf("nome da cidade2: %s \n", nomedacidade2);
@@ -107,6 +107,16 @@ int main() {
     printf("vencedor pontos turísticos: %d \n", pontosturísticos > pontosturísticos2);
     printf("vencedor densidade P: %d \n", densidadepopulacional < densidadepopulacional2);
     printf("vencedor pib per capita: %d \n", pibpercapita > pibpercapita2);
+
+
+    printf("carta 1: %s %d \n", estado, população);
+    printf("carta 2: %s %d \n", estado2, população2);
+
+    if(população > população2){
+        printf("Carta 1 venceu! \n");
+    }else{
+        printf("Carta 2 venceu! \n");
+    }
 
 
     return 0;
