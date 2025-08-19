@@ -26,6 +26,7 @@ int main() {
     float superPoder;
     float superPoder2;
     int opcao;
+    int opcao2;
 
     printf("nome do estado: \n");
     scanf(" %s", estado);
@@ -109,7 +110,7 @@ int main() {
     printf("vencedor densidade P: %d \n", densidadepopulacional < densidadepopulacional2);
     printf("vencedor pib per capita: %d \n", pibpercapita > pibpercapita2);
 
-    printf("*** ESCOLHA QUAL ATRIBUTO COMPARAR: *** \n");
+    printf("*** ESCOLHA QUAL ATRIBUTO COMPARAR PRIMEIRO: *** \n");
     printf("1. Comparar população! \n");
     printf("2. comparar área! \n");
     printf("3. comparar PIB! \n");
@@ -120,8 +121,8 @@ int main() {
 
     switch(opcao){
         case 1:
-        printf("População 1: %d \n", população);
-        printf("população 2: %d \n", população2);
+        printf("Estado: %s População 1: %lu \n", estado, população);
+        printf("estado 2: %s população 2: %lu \n",estado2, população2);
         if(população > população2){
             printf("*** Parabens voce venceu! ***");
         } else if(população == população2){
@@ -132,8 +133,8 @@ int main() {
         break;
 
         case 2:
-        printf("Área 1: %2.f \n", área);
-        printf("Área 2: %2.f \n", área2);
+        printf("Estado: %s Área 1: %2.f \n",estado, área);
+        printf("Estado 2: %s Área 2: %2.f \n",estado2, área2);
         if(área > área2){
             printf("*** Parabens voce venceu! ***");
         } else if(área == área2){
@@ -144,8 +145,8 @@ int main() {
         break;
 
         case 3:
-        printf("PIB 1: %2.f \n", pib);
-        printf("PIB 2: %2.f \n", pib2);
+        printf("Estado: %s PIB 1: %2.f \n",estado, pib);
+        printf("Estado 2: %s PIB 2: %2.f \n",estado2, pib2);
         if(pib > pib2){
             printf("*** Parabens voce venceu! ***");
         } else if(pib == pib2){
@@ -156,8 +157,8 @@ int main() {
         break;
 
         case 4:
-        printf("Número de Pontos Turísticos 1: %d \n", pontosturísticos);
-        printf("Número de Pontos Turísticos 2: %d \n", pontosturísticos2);
+        printf("Estado: %s Número de Pontos Turísticos 1: %d \n",estado, pontosturísticos);
+        printf("Estado 2: %s Número de Pontos Turísticos 2: %d \n",estado2, pontosturísticos2);
         if(pontosturísticos > pontosturísticos2){
             printf("*** Parabens voce venceu! ***");
         } else if(pontosturísticos == pontosturísticos2){
@@ -168,22 +169,100 @@ int main() {
         break;
 
         case 5:
-        printf("Densidade Populacional 1: %2.f \n", densidadepopulacional);
-        printf("Densidade Populacional 2: %2.f \n", densidadepopulacional2);
+        printf("Estado: %s Densidade Populacional 1: %2.f \n",estado, densidadepopulacional);
+        printf("Estado 2: %s Densidade Populacional 2: %2.f \n",estado2, densidadepopulacional2);
         if(densidadepopulacional < densidadepopulacional2){
             printf("*** Infelizmente voce perdeu! ***");
         } else if(densidadepopulacional == densidadepopulacional2){
             printf("*** EMPATE *** \n");
         } else{
-            printf("*** Parabens voce venceu! ***");
+            printf("*** Parabens voce venceu! *** \n");
         }
         break;
         default:
-        printf("Opção Inválida!!!");
+        printf("Opção Inválida!!!\n");
+        break;
+      }
 
     
-        
+    printf("*** ESCOLHA QUAL ATRIBUTO COMPARAR EM SEGUNDO: *** \n");
+    printf("1. Comparar população! \n");
+    printf("2. comparar área! \n");
+    printf("3. comparar PIB! \n");
+    printf("4. comparar Numero de Pontos Turísticos! \n");
+    printf("5. comparar Densidade Demográfica! \n");
+    printf(" ESCOLHA: \n");
+    scanf("%d", &opcao2);
+
+    if(opcao == opcao2){
+        printf("VOCE ESCOLHEU A MESMA OPÇÃO, ESCOLHA OUTRA! \n");
+    }else{
+        switch(opcao){
+        case 1:
+        printf("Estado: %s População 1: %lu \n", estado, população);
+        printf("estado 2: %s população 2: %lu \n",estado2, população2);
+        if(população > população2){
+            printf("*** Parabens voce venceu! ***");
+        } else if(população == população2){
+            printf("*** EMPATE *** \n");
+        }else{
+            printf("*** Infelizmente voce perdeu! ***");
         }
+        break;
+
+        case 2:
+        printf("Estado: %s Área 1: %2.f \n",estado, área);
+        printf("Estado 2: %s Área 2: %2.f \n",estado2, área2);
+        if(área > área2){
+            printf("*** Parabens voce venceu! ***");
+        } else if(área == área2){
+            printf("*** EMPATE *** \n");
+        } else{
+            printf("*** Infelizmente voce perdeu! ***");
+        }
+        break;
+
+        case 3:
+        printf("Estado: %s PIB 1: %2.f \n",estado, pib);
+        printf("Estado 2: %s PIB 2: %2.f \n",estado2, pib2);
+        if(pib > pib2){
+            printf("*** Parabens voce venceu! ***");
+        } else if(pib == pib2){
+            printf("*** EMPATE *** \n");
+        } else{
+            printf("*** Infelizmente voce perdeu! ***");
+        }
+        break;
+
+        case 4:
+        printf("Estado: %s Número de Pontos Turísticos 1: %d \n",estado, pontosturísticos);
+        printf("Estado 2: %s Número de Pontos Turísticos 2: %d \n",estado2, pontosturísticos2);
+        if(pontosturísticos > pontosturísticos2){
+            printf("*** Parabens voce venceu! ***");
+        } else if(pontosturísticos == pontosturísticos2){
+            printf("*** EMPATE *** \n");
+        } else{
+            printf("*** Infelizmente voce perdeu! ***");
+        }
+        break;
+
+        case 5:
+        printf("Estado: %s Densidade Populacional 1: %2.f \n",estado, densidadepopulacional);
+        printf("Estado 2: %s Densidade Populacional 2: %2.f \n",estado2, densidadepopulacional2);
+        if(densidadepopulacional < densidadepopulacional2){
+            printf("*** Infelizmente voce perdeu! ***");
+        } else if(densidadepopulacional == densidadepopulacional2){
+            printf("*** EMPATE *** \n");
+        } else{
+            printf("*** Parabens voce venceu! *** \n");
+        }
+        break;
+        default:
+        printf("Opção Inválida!!!\n");
+        break;
+      }
+    }
+    
         
     
     
